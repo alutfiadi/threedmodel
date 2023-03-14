@@ -1,0 +1,21 @@
+{
+	"Spots": {
+		"items": [
+			{
+				"pos": "106.652292;-6.302252;0",
+				"tooltip": "The GOP 9",
+				"type": "Inactive",
+				"text": "GOP 9",
+				"id": "111"
+
+			},
+			{
+				"pos": "106.65437;-6.3012645;0",
+				"tooltip": "The Breeze",
+				"type":"Success",
+				"id": "999",
+				"text":"Breeze"
+			}
+		]
+	}
+}

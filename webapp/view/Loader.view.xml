@@ -1,0 +1,17 @@
+<mvc:View controllerName="threedmodel.controller.Loader"
+	xmlns="sap.m"
+	xmlns:vk="sap.ui.vk"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true">
+	<Shell id="_IDGenShell1">
+		<App id="colladaLoader">
+			<Page id="_IDGenPage1" title="3D Model Viewer">
+				<vk:Viewer id="viewer">
+					<vk:contentResources>
+						<vk:ContentResource id="_IDGenContentResource1" source="/models/Manado/model.dae" sourceType="dae" name="Collada Model"/>
+					</vk:contentResources>
+				</vk:Viewer>
+			</Page>
+		</App>
+	</Shell>
+</mvc:View>

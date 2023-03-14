@@ -1,0 +1,42 @@
+<mvc:View controllerName="threedmodel.controller.Main" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" xmlns="sap.m" xmlns:vbm="sap.ui.vbm" xmlns:cdata="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" height="100%" displayBlock="true">
+    <l:FixFlex id="_IDGenFixFlex1" class="fixFlexVertical">
+        <l:fixContent>
+            <Panel id="_IDGenPanel1" expandable="true" expanded="{= !${device>/system/phone} }" headerText="Description">
+                <headerToolbar>
+                    <Toolbar id="_IDGenToolbar1">
+                        <Title id="_IDGenTitle1" text="Description" />
+                        <ToolbarSpacer id="_IDGenToolbarSpacer1" />
+                        <Button id="btnResize" icon="sap-icon://resize" press="onPressResize" tooltip="Minimize" />
+                    </Toolbar>
+                </headerToolbar>
+                <content>
+                    <VBox id="_IDGenVBox1" class="sapUiTinyMargin">
+                        <Text id="_IDGenText1"
+                            text="The geomap is useful for displaying points of interest, area objects or other charts above the map. The geomap is the best choice if you have location-based data. The geo map control can be minimized to a thumbnail, which can e.g. be used for the SAP Fiori Launchpad. The size of the thumbnail can be chosen by the application. In the minimized state only the thumbnail click event is available, all other mouse, keyboard, and touch events are disabled."
+                        />
+                        <Text id="_IDGenText2" class="sapUiTinyMarginTop" text="See also: " />
+                        <Link id="_IDGenLink1" class="sapUiLargeMarginLeft" text="Visual business best practices" target="_blank" href="test-resources/sap/ui/vbm/bestpractices.html" />
+                    </VBox>
+                </content>
+            </Panel>
+        </l:fixContent>
+        <l:flexContent>
+            <vbm:GeoMap id="GeoMap" width="100%" xmlns:l="sap.ui.layout" height="100%" initialZoom="1" openWindow="onOpenDetail" closeWindow="onCloseDetail">
+                <vbm:resources>
+                    <!--<vbm:Resource name="PinGreen.png" src="test-resources/sap/ui/vbm/demokit/media/images/Green_Pin.png"></vbm:Resource>-->
+                    <!--<vbm:Resource name="PinGrey.png" src="test-resources/sap/ui/vbm/demokit/media/images/Grey_Pin.png"></vbm:Resource>-->
+                    <!--<vbm:Resource name="PinOrange.png" src="test-resources/sap/ui/vbm/demokit/media/images/Orange_Pin.png"></vbm:Resource>-->
+                    <!--<vbm:Resource name="PinRed.png" src="test-resources/sap/ui/vbm/demokit/media/images/Red_Pin.png"></vbm:Resource>-->
+                </vbm:resources>
+                <vbm:vos>
+                    <vbm:Spots id="_IDGenSpots1" click="onClickItem" posChangeable="true" scaleChangeable="false" contextMenu="onContextMenuItem" items="{/Spots/items}">
+                        <vbm:items>
+                            <vbm:Spot id="Spot" position="{pos}" tooltip="{tooltip}" type="{type}" text="{text}" contentOffset="{contentOffset}" click="onClickSpot" contextMenu="onContextMenuSpot" cdata:spotid="{id}" />
+                        </vbm:items>
+                    </vbm:Spots>
+                    <vbm:Spots id="eSpot" />
+                </vbm:vos>
+            </vbm:GeoMap>
+        </l:flexContent>
+    </l:FixFlex>
+</mvc:View>

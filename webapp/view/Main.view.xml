@@ -1,6 +1,6 @@
 <mvc:View controllerName="threedmodel.controller.Main" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" xmlns="sap.m" xmlns:vbm="sap.ui.vbm" xmlns:cdata="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" height="100%" displayBlock="true">
-    <l:FixFlex id="_IDGenFixFlex1" class="fixFlexVertical">
-        <l:fixContent>
+    <l:FixFlex id="_IDGenFixFlex1" class="fixFlexVertical" title="Map">
+        <!-- <l:fixContent>
             <Panel id="_IDGenPanel1" expandable="true" expanded="{= !${device>/system/phone} }" headerText="Description">
                 <headerToolbar>
                     <Toolbar id="_IDGenToolbar1">
@@ -19,7 +19,7 @@
                     </VBox>
                 </content>
             </Panel>
-        </l:fixContent>
+        </l:fixContent> -->
         <l:flexContent>
             <vbm:GeoMap id="GeoMap" width="100%" xmlns:l="sap.ui.layout" height="100%" initialZoom="1" openWindow="onOpenDetail" closeWindow="onCloseDetail">
                 <vbm:resources>

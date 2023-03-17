@@ -5,9 +5,10 @@
 sap.ui.define([
         "sap/ui/core/UIComponent",
         "sap/ui/Device",
-        "threedmodel/model/models"
+        "threedmodel/model/models",
+        "sap/ui/model/json/JSONModel"
     ],
-    function (UIComponent, Device, models) {
+    function (UIComponent, Device, models, JSONModel) {
         "use strict";
 
         return UIComponent.extend("threedmodel.Component", {
@@ -29,6 +30,14 @@ sap.ui.define([
 
                 // set the device model
                 this.setModel(models.createDeviceModel(), "device");
+
+                var oRootPath = jQuery.sap.getModulePath("threedmodel"); // your resource root
+		
+                var oPathModel = new sap.ui.model.json.JSONModel({
+                    path : oRootPath,
+                });
+                        
+                this.setModel(oPathModel, "pathModel");
             }
         });
     }

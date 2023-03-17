@@ -1,0 +1,11 @@
+{
+    "base": "./dist",
+    "conn_usestrictssl" : false, 
+    "conn_server": "https://smlhanaapp.sinarmasland.net:44300",
+    "conn_client" : "800", 
+    "conn_user": "NDBS_LUTFI",
+    "conn_password": "Ndbs123456",
+    "abap_package": "$TMP",
+    "abap_bsp": "ZTHREEDMODEL",
+    "abap_bsp_text": "3D Model VIewer"
+}

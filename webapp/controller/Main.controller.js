@@ -21,7 +21,8 @@ sap.ui.define([
     return Controller.extend("threedmodel.controller.Main", {
         onInit: function () {
             //JSON Model
-            var oModel = new JSONModel("/LocalData/Data.json");
+            var sModulePath = jQuery.sap.getModulePath("threedmodel");
+            var oModel = new JSONModel(sModulePath + "/LocalData/Data.json");
             this.getView().setModel(oModel);
 
             // console.log(oModel);

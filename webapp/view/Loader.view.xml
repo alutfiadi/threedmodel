@@ -8,7 +8,7 @@
 			<Page id="_IDGenPage1" title="3D Model Viewer">
 				<vk:Viewer id="viewer">
 					<vk:contentResources>
-						<vk:ContentResource id="_IDGenContentResource1" source="/models/Manado/model.dae" sourceType="dae" name="Collada Model"/>
+						<vk:ContentResource id="_IDGenContentResource1" source="{pathModel>/path}/models/Manado/model.dae" sourceType="dae" name="Collada Model"/>
 					</vk:contentResources>
 				</vk:Viewer>
 			</Page>

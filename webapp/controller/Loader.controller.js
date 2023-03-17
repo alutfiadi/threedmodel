@@ -35,7 +35,8 @@ sap.ui.define([
 			var colladaLoader = function(parentNode, contentResource) {
 				return new Promise(function(resolve, reject) {
 					// var url = "https://threejs.org/examples/jsm/loaders/ColladaLoader.js";
-					var url = "/libs/ColladaLoader.js";
+					var sModulePath = jQuery.sap.getModulePath("threedmodel");
+					var url = sModulePath + "/libs/ColladaLoader.js";
 					jQuery.ajax({
 						url: url,
 						dataType: "script",
